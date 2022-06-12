@@ -3,11 +3,11 @@ import random
 
 np.set_printoptions(threshold=np.inf)
 
-def genBoard(num = int(input("board size: "))):
+def genBoard(num = 10):
   board = np.zeros((num, num), int)
   for i in range(num):
     for j in range(num):
-      if random.randint(0,9) < 2:
+      if random.randint(0,15) < 2:
         board[i][j] = 1
   return board
 
@@ -35,3 +35,6 @@ def compute(board):
       else:
         result[i][j] = 0
   return result
+
+  if __name__ == "__main":
+    pass
